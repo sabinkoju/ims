@@ -1,0 +1,33 @@
+[18-Nov-2019 11:41:48 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php:788
+Stack trace:
+#0 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(788): ReflectionClass->__construct('view')
+#1 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('view')
+#2 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve('view', Array)
+#3 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make('view', Array)
+#4 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(1227): Illuminate\Foundation\Application->make('view')
+#5 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.p in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 788
+[18-Nov-2019 11:41:51 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php:788
+Stack trace:
+#0 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(788): ReflectionClass->__construct('view')
+#1 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('view')
+#2 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve('view', Array)
+#3 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make('view', Array)
+#4 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(1227): Illuminate\Foundation\Application->make('view')
+#5 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.p in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 788
+[18-Nov-2019 11:41:55 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php:788
+Stack trace:
+#0 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(788): ReflectionClass->__construct('view')
+#1 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('view')
+#2 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve('view', Array)
+#3 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make('view', Array)
+#4 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(1227): Illuminate\Foundation\Application->make('view')
+#5 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.p in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 788
+[18-Nov-2019 11:42:10 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php:788
+Stack trace:
+#0 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(788): ReflectionClass->__construct('view')
+#1 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('view')
+#2 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve('view', Array)
+#3 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make('view', Array)
+#4 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php(1227): Illuminate\Foundation\Application->make('view')
+#5 /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.p in /home/gcncpavd/ims.gcn.com.np/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 788
+[05-Dec-2019 06:11:18 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gcncpavd/ims.gcn.com.np/app/Http/Controllers/AttendanceController.php on line 130
