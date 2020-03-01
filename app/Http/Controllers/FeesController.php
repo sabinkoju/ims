@@ -11,6 +11,7 @@ use PDF;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
 use Illuminate\Auth\AuthManage;
+use Illuminate\Support\Str;
 use DB;
 class FeesController extends Controller
 {
@@ -51,7 +52,7 @@ return view('admin.fee.add',compact('courses','student'));
 
 
 public function viewFees(Request $request){
-    if(\Gate::denies('admin_staff')){
+        if(\Gate::denies('admin_staff')){
         abort(403, 'Access Denied');
     }
 
@@ -104,13 +105,14 @@ public function viewFees(Request $request){
          $payment->mode_of_payment=$data['mode_of_payment'];
          $payment->document_number=$data['document_number'];
 
-         $random = str_random(20);
-         if ($request->hasFile('doc_image')) {
-             $image_tmp = Input::file('doc_image');
+         $random = Str::random(20);
+         if ($request->hasFile('image')) {
+             $image_tmp = Input::file('image');
              if ($image_tmp->isValid()) {
                  $extension = $image_tmp->getClientOriginalExtension();
                  $filename = $random . '.' . $extension;
-                 $image_path = 'public/uploads/feedocuments/' . $filename;
+                 $image_path = public_path('uploads/feedocuments/'). $filename;
+//                 dd($image_path);
                  // Resize Image Code
                  Image::make($image_tmp)->save($image_path);
                  // Store image name in products table
@@ -128,7 +130,7 @@ public function viewFees(Request $request){
              $student->save();
 
          }
-        return redirect()->route('viewFees');
+        return redirect()->route('viewfeedetails',$payment->student_id);
 
      }
 
@@ -156,7 +158,7 @@ public function viewFees(Request $request){
      $student->save();
 
 
-     $image_path = 'public/uploads/feedocuments/';
+     $image_path = 'uploads/feedocuments/';
 
      if(!empty($payment->doc_image)){
          if(file_exists($image_path.$payment->doc_image)){
@@ -252,7 +254,7 @@ public function viewFees(Request $request){
                 if ($image_tmp->isValid()) {
                     $extension = $image_tmp->getClientOriginalExtension();
                     $filename = $random . '.' . $extension;
-                    $image_path = 'public/uploads/feedocuments/' . $filename;
+                    $image_path = 'uploads/feedocuments/' . $filename;
                     // Resize Image Code
                     Image::make($image_tmp)->save($image_path);
                     // Store image name in products table

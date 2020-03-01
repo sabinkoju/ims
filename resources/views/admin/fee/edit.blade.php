@@ -78,30 +78,41 @@
                    <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="image">Image</label>
+                                    <div class="input-group mb-3">
                                     <input type="hidden" name="current_image">
                                     <input type="file" class="form-control" id="image"
                                            name="image" data-validation="mime size"
                                            data-validation-allowing="jpg, png"
                                            data-validation-max-size="1024kb"
-                                           data-validation-error-msg-required="Please Upload User Image"
+                                           data-validation-error-msg-required="Please Upload Document"
                                         value="{{$payment->doc_image}}">
+                                    <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon1">
+                                               <a data-toggle="modal" data-target="#imageModal"> <i class="fa fa-eye"></i></a>
+                                            </span>
+                                    </div>
                                 </div>
                     </div>
 
                 </div>
-
-
-
-
                             <button  type="submit" class="btn btn-primary">UPDATE FEE</button>
 
                             <a href="{{ route('viewFees') }}" class="btn btn-danger">Go Back</a>
 
-
-
-
-
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-body">
+                        @if(!empty($payment->doc_image))
+                            <img src="{{ asset('uploads/feedocuments/'.$payment->doc_image) }}" alt="{{ $payment->name }}" height="200px" width="auto">
+                        @else
+                            <img src="{{ asset('uploads/profile/profile.png') }}" alt="{{ $payment->name }}" height="200px" width="auto">
+                        @endif
                     </div>
                 </div>
             </div>
