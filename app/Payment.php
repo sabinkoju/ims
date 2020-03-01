@@ -10,8 +10,7 @@ class Payment extends Model
             $payment_num = 1;
             $row = self::orderBy('id', 'DESC')->first();
             $payment_new = (is_null($row)) ? '#PAYMENT-'.$payment_num : '#PAYMENT-'.((int)(
-                    str_replace("#PAYMENT-", "", $row->code)
-                    ) + 1);
+                    str_replace("#PAYMENT-", "", $row->id)+ 1));
             return $payment_new;
         }
 }
